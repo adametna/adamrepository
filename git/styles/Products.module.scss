@@ -1,0 +1,21 @@
+.cards {
+    font-family: 'Trebuchet MS';
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18rem);
+    gap: 2rem;
+    justify-content: center;
+}
+
+.header {
+    font-family: 'Trebuchet MS';
+    color: black;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1;
+}

@@ -1,0 +1,100 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-decoration: none;
+    padding: 0 1rem;
+    margin-right: 24px;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+}
+
+
+
+.navigation a {
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+    
+}
+
+.jerseys_button {
+    background-color: transparent;
+    color: black;
+    font-family: 'Trebuchet MS';
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+
+}
+
+.dropdown_menu {
+    display: none;
+    position:absolute;
+    background-color: white;
+    z-index: 1;
+    width: auto;
+    border-radius: 2px;
+    padding: 12px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.262);
+}
+.dropdown_menu a {
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 8px;
+    color: black;
+    padding: 7px;
+    transition: 0.1s;
+    font-family: 'Trebuchet MS';
+}
+
+.home_button {
+
+    background-color: transparent;
+    color: black;
+    font-family: 'Trebuchet MS';
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+ 
+.dropdown_menu a:hover {
+    opacity: 75%;
+    transition: 0.1s;
+
+}
+
+.menu {
+
+position: relative;
+display: inline-block;
+
+}
+
+.menu:hover .dropdown_menu {
+    display: grid;
+    grid-template-rows: auto;
+
+
+}
+
+.menu:hover .jerseys_button {
+    background-color: transparent;
+}
+
+.navigation a:hover {
+    opacity: 85%;
+
+}
