@@ -28,7 +28,7 @@ const Ligue1 = () => {
               }
             })
             .map((product: any, index: any) => {
-              return <Card props={product} />;
+              return <Card props={product}/>;
             })}
         </div>
       </div>

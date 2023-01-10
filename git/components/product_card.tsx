@@ -21,7 +21,7 @@ export default function Card({ props }: any) {
       <img className={styles.img} src={props.image} alt="Shirt"></img>
       <h1>{props.name}</h1>
       <p className={styles.price}>{props.price}.00€</p>
-      <button onClick={() => increaseCartQuantity(props.id)}>
+      <button onClick={() => increaseCartQuantity(props._id, props)}>
         Add to cart
       </button>
     </div>

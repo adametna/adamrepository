@@ -9,7 +9,7 @@ import { Button } from "react-bootstrap";
 export default function Navigation() {
   const { openCart, cartQuantity }: any = useCart();
   return (
-    <div className={styles.navigation}>
+    <div className={styles.navigation} id="bootstrap-overrides">
       <div>
         <Link href="/Home">
           {" "}
@@ -32,7 +32,7 @@ export default function Navigation() {
           <SearchBar placeholder="Search" data={data} />
         </div>
         <div>
-          <button className={styles.cart}>
+          <button className={styles.cart} onClick={openCart}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -50,7 +50,7 @@ export default function Navigation() {
           </button>
         </div>
         <div>
-          <Button className={styles.loginButton}>
+          <button className={styles.loginButton} >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#000000"
@@ -65,7 +65,7 @@ export default function Navigation() {
                 <path d="M24.4,119.4C35,108.8,49,103,64,103s29,5.8,39.6,16.4l5.7-5.7C97.2,101.7,81.1,95,64,95s-33.2,6.7-45.3,18.7L24.4,119.4z" />
               </g>
             </svg>
-          </Button>
+          </button>
         </div>
       </div>
     </div>

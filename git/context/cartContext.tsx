@@ -8,8 +8,8 @@ type cartProviderProps = {
 const cartContext = createContext({} as cartContext);
 
 type cartContext = {
-  // openCart: () => void;
-  // closeCart: () => void;
+  openCart: () => void;
+  closeCart: () => void;
   getItemQuantity: (id: number) => number;
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
@@ -28,7 +28,7 @@ type cartItem = {
 };
 
 export function CartProvider({ children }: cartProviderProps) {
-  // const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState<cartItem[]>([]);
 
   const cartQuantity = cartItems.reduce(
@@ -36,8 +36,8 @@ export function CartProvider({ children }: cartProviderProps) {
     0
   );
 
-  // const openCart = () => setIsOpen(true);
-  // const closeCart = () => setIsOpen(false);
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
   function getItemQuantity(id: number) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
@@ -88,13 +88,14 @@ export function CartProvider({ children }: cartProviderProps) {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
-        // openCart,
-        // closeCart,
+        openCart,
+        closeCart,
         cartItems,
         cartQuantity,
       }}
     >
       {children}
+      <Cart isOpen={isOpen}/>
     </cartContext.Provider>
   );
 }
