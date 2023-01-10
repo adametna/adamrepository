@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navigation from "./Navigation";
+import Navigation from "../components/Navigation";
 import styles from "../styles/Products.module.scss";
 import Card from "../components/product_card";
 import { getProduct } from "../api/getProduct";

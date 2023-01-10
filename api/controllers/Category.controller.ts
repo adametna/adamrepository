@@ -19,3 +19,25 @@ export async function createCategory(req: Request, res: Response) {
   }
   return res.status(404).send("category cant be created");
 }
+
+export async function modifyCategory(req: Request, res: Response) {
+  const id = req.params.id;
+  const category: any = await Category.findOne({ _id: id });
+
+  let name = req.body.name;
+
+  const result = await Category.findOneAndUpdate(
+    { _id: id },
+    {
+      $set: {
+        name: name,
+      },
+    }
+  );
+
+  if (result) {
+    return res.send(result);
+  }
+
+  return res.status(404).send("cant update category");
+}

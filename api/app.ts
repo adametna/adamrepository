@@ -10,12 +10,12 @@ app.use(bodyParser.json({}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({ origin: "*" }));
 
-app.set("port", 3000);
+app.set("port", 3001);
 app.use("/", routes);
 
 connect().catch((error) => {
   console.log(error);
 });
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("listening tah l cia");
 });

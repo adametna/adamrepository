@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "./Navigation";
+import Navigation from "../components/Navigation";
 import styles from "../styles/Products.module.scss";
 
 export default function Jerseys() {

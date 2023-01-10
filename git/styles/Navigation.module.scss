@@ -107,7 +107,7 @@ display: inline-block;
     width: 2.5rem;
     background-color: transparent;
     border: none;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .cart_count {
@@ -117,4 +117,26 @@ display: inline-block;
     right: 0;
     transform: translate(25%, 25%);
     font-family: 'Trebuchet MS';
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBar {
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Trebuchet MS';
+}
+
+.loginButton {
+    cursor: pointer;
+    position: relative;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: transparent;
+    border: none;
+    margin-right: 40px;
 }
